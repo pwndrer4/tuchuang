@@ -1,154 +1,213 @@
+<!-- 
+四合一图床上传，支持百度(2M)、搜狗(2M)、360(2M)、新浪(10M)图片上传
+声明：前端无版权，5G云源码分享网调用YoungxjApis接口
+-->
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang='zh-cn'>
 <head>
-<meta name="referrer" content="no-referrer"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<title>Alan中文源免费图床 - 阿里巴巴稳定图片外链服务 - tuchuang.z68p.cn</title>
-<meta name="keywords" content="uomg,资源客,Alan中文源,免费图床,新浪图床,淘宝图床,图片外链,稳定图床,免费图床,网络图片,图片库,相册,网络相册,批量上传,批量生成">
-<meta name="description" itemprop="description" content="资源客永久免费图床，稳定图片外链；支持批量上传,即时预览,不限制流量,不限制外链数,永久保存,阿里巴巴图片服务器,全网CDN图床,高速稳定,支持网页,手机上传,无需插件,支持JPG,GIF,PNG等文件格式,微博图床,土豆是个好图床"/>
-<link rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://lib.baomitu.com/prettify/latest/prettify.css">
-<script rel="stylesheet" src="https://lib.baomitu.com/layer/3.1.1/mobile/layer.js"></script>
-<style type="text/css">
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,'sans-serif';background: url(https://api.uomg.com/api/image.lofter?format=images); background-size: cover;}
-    @font-face {font-family: 'webfont_2';
-        src: url('//at.alicdn.com/t/webfont_bar76uyhrpd.eot'); /* IE9*/
-        src: url('//at.alicdn.com/t/webfont_bar76uyhrpd.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('//at.alicdn.com/t/webfont_bar76uyhrpd.woff') format('woff'), /* chrome、firefox */
-        url('//at.alicdn.com/t/webfont_bar76uyhrpd.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-        url('//at.alicdn.com/t/webfont_bar76uyhrpd.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
-    }
-    .text-center{text-align: center;}
-    .text-white{color: #FFF;}
-    .header,.footer{margin: 30px;color:#fff;}
-    .title1{font-size: 20px;}
-    .title2{font-size: 24px;font-family:"webfont_2" !important;}
-    .jumbotron{margin: auto;text-align: center;background-color: rgba(255, 255, 255, .3);}
-    .jumbotron input[type=file] {opacity:0;width:102px;height:31px;position:absolute;display:inline-block;}
-    .preview {color: #fff;}
-    .preview img {max-width: 10%;}
-    .preview p {word-break: break-all;word-wrap: break-word;font-size: 13px !important;}
-    .form-control:focus{background-color: rgba(255, 255, 255, .3);}
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>四合一图床上传 - Cdn图床,百度图床,新浪图床,360图床,搜狗图床</title>
+
+	<link rel='stylesheet' href='https://cdn.bootcss.com/normalize/5.0.0/normalize.min.css'>
+	<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+	<style>
+	html,body {height: 100%;margin: 0;padding: 0;}body {font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;align-items: center;display: flex;}a{text-decoration:none;}#container {max-width: 400px;flex-basis: 100%;margin: 0 auto;background: #FFF;border-radius: 10px;box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);overflow: hidden;}#container #hero-img {width: 100%;height: 200px;background: #007bff;}#container #profile-img {width: 160px;height: 160px;margin: -80px auto 0 auto;}#container #profile-img img {width: 100%;background: #FFF;border-radius: 50%;}#container #content {text-align: center;width: 320px;margin: 0 auto;padding: 0 0 50px 0;}#container #content h1 {font-size: 29px;font-weight: 500;margin: 30px 0 0 0;}#container #content p {font-size: 18px;font-weight: 400;line-height: 1.4;color: #666;margin: 15px 0 40px 0;}#container #content a {color: #CCC;font-size: 14px;margin: 0 10px;transition: color .3s ease-in-out;-webkit-transition: color .3s ease-in-out;line-height: 40px;}#container #content a:hover {color: #007bff;}.btn{background: none repeat scroll 0 0 #1BA1E2; border: 0 none; border-radius: 2px; color: #FFFFFF !important; cursor: pointer; font-family: "Open Sans","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Verdana,Tahoma,sans-serif; font-size: 14px;  padding: 6px 10%;}.btn:hover,.yanshibtn:hover{background: none repeat scroll 0 0 #9B59B6; border: 0 none; border-radius: 2px; color: #FFFFFF!important; cursor: pointer; font-family: "Open Sans","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Verdana,Tahoma,sans-serif; font-size: 14px; padding: 8px 10%;}
+	.imgType{display: none;}
+	#images img{width: 100%}
+	#imgurl input{width: 100%}
+	#imgurl,#progress{display: none;}
+
+	@-webkit-keyframes rotation{
+		from {-webkit-transform: rotate(0deg);}
+		to {-webkit-transform: rotate(360deg);}
+	}
+
+	.Rotation{
+		-webkit-transform: rotate(360deg);
+		animation: rotation 3s linear infinite;
+		-moz-animation: rotation 3s linear infinite;
+		-webkit-animation: rotation 3s linear infinite;
+		-o-animation: rotation 3s linear infinite;
+	}
+
+	.img{border-radius: 250px;}
 </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span12 header text-center">
-                <p class="title1">© Alan中文源免费图床</p>
-                <p class="title2">阿里巴巴图片外链服务 稳定不掉线 免费使用</p>
-            </div>
-            <div class="col-md-8 col-xs-10 jumbotron" style="margin:auto;">
-                <div class="mselector">
-				<a href="https://z68p.cn/"><button class="btn btn-primary btn-sm">Alan中文源-官网</button></a>
-                    <input type="file" accept="image/*" multiple>
-                    <button type="button" class="btn btn-primary btn-sm">选择本地图片</button>
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#url_upload_model">上传远程图片</button>                   
-                </div><hr>
-                <textarea id="url-res-txt" class="form-control" rows="5" placeholder="上传后的图片外链地址将显示在此处，下方会同时显示外链地址和预览图。"></textarea>
-                <div class="preview">
-                    <hr>
-                </div>
-                <span class="title1"><b>温馨提示:</b> 本站不存储且无权管理上传的图源，图源均存放在阿里云对象储存，切勿上传违反法规图源，否则后果自负。<br>我们将您上传的图片储存在阿里云对象储存并且cdn出去，全球有将近50个节点让您有更好的体验<br>本站永久免费，请自行保持上传后得到的url，本站不作保存</span>
-            </div>
-            <div class="footer text-center">
-                <a target="_blank" class="title1">© 2020 Powered by Alan中文源.</a>
+	<div id='container'>
+		<div id='hero-img'>
+		</div>
+		<div id='profile-img'>
+			<img src='https://ww2.sinaimg.cn/large/005BYqpggy1fxbboztih4j305k05kwef.jpg' id="imgLoading" class="Rotation img" title="显示与隐藏"/>
+		</div>
+		<div id='content'>
+			<h2>四合一图床上传</h2>
+			<h5>
+				百度图床-新浪图床-搜狗图床-360图床
+			</h5>
+			<div id="progress"><progress max="100" value="0" id="pg"></progress></div>
+			<p class="imgType" id="imgType"></p>
+			<form id="form1">
+				<a href='javascript:void(0)' id="baiduImg" onclick="update('baidu')" class="btn btn-default" rel='nofollow'>百度图床</a><a href='javascript:void(0)' id="SinaImg" onclick="update('sina')" class="btn btn-default" rel='nofollow'>新浪图床</a>
+				<a href='javascript:void(0)' id="sougouImg" onclick="update('sougou')" class="btn btn-default" rel='nofollow'>搜狗图床</a><a href='javascript:void(0)' id="soImg" onclick="update('so')" class="btn btn-default" rel='nofollow'>360 图床</a>
+				<input type="file" id="file" name="file" onchange="sc($('#imgType').attr('imgType'));" style="display:none" accept="image/*">
+			</form>
+			<div class="imgContent" id="imgContent">
+				<div id="images"></div>
+				<div id="imgurl">
+					<code>ImgUrl:</code>
+					<input onclick="oCopy(this)" value=""  id="Imgs_url">
+					<code>HtmlUrl:</code>
+					<input onclick="oCopy(this)" value=""  id="Imgs_html">
+					<code>Ubb:</code>
+					<input onclick="oCopy(this)" value=""  id="Imgs_Ubb">
+					<code>Markdown:</code>
+					<input onclick="oCopy(this)" value=""  id="Imgs_markdown">
+				</div>
+			</div>
 
-<p><a target="_blank" href="http://www.beian.miit.gov.cn/">苏ICP备20020024号-21</a></p>
+		</div>
+	</div>
+</body><!-- 闲鱼资源网：精品资源分享网www.xianyuboke.com -->
+<script type="text/javascript">
+/**
+ * @act      sina
+ * @version  1.2
+ * @author  2kqq
+ */
 
-            </div>
-        </div>
-    </div>
-    <div id="url_upload_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    	<div class="modal-dialog">
-    		<div class="modal-content">
-    			<div class="modal-header">
-    				<h4 class="modal-title" id="myModalLabel">上传远程图片</h4>
-    			</div>
-    			<div class="modal-body">
-    				<p class="lead">
-    					请在下方输入远程图片地址~每行一个~
-    				</p>
-    				<textarea class="form-control" name="urls" rows="3" id="urls"></textarea>
-    			</div>
-    			<div class="modal-footer">
-    				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-    				<button type="button" class="btn btn-primary" onclick="url_upload();">提交</button>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    <script src="https://lib.baomitu.com/jquery/3.4.0/jquery.min.js" type="text/javascript"></script>
-    <script src="https://lib.baomitu.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var url = 'https://api.uomg.com/api/image.ali';
-        $(document).ready(function() {
-            $("input[type='file']").change(function(e) {
-                file_upload(this.files)
-            });
-            var obj = $('body');
-            obj.on('dragenter', function(e) {
-                e.stopPropagation();
-                e.preventDefault()
-            });
-            obj.on('dragover', function(e) {
-                e.stopPropagation();
-                e.preventDefault()
-            });
-            obj.on('drop', function(e) {
-                e.preventDefault();
-                file_upload(e.originalEvent.dataTransfer.files)
-            });
-        });
-        function file_upload(files){
-            if (files.length == 0) return alert('请选择图片文件！');
-            for(var j = 0,len = files.length; j < len; j++){
-                console.log(files[j]);
-                let imageData = new FormData();
-                imageData.append("file", 'multipart');
-                imageData.append("Filedata", files[j]);
-                $.ajax({
-                    url: url,
-                    type: 'POST',
-                    data: imageData,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    dataType: 'json',
-                    // 图片上传成功
-                    success: function (result) {
-                        if (result.code == 1){
-                            $('.preview').append('<div><img src="'+result.imgurl+'" ><code class="title1">'+result.imgurl+'</code></div>');
-                        }else{
-                            layer.msg('第'+j+'个图片上传失败');
-                        }
-                    },
-                    // 图片上传失败
-                    error: function () {
-                        console.log('图片上传失败');
-                    }
-                });
-            }
-        }
-        function url_upload(){
-            var urls = $('#urls').val();
-            if (urls == false) return alert('请输入图片链接！');
-            var UrlArr = urls.split("\n");
-            $('#url_upload_model').modal('hide');
-            for(var j = 0,len = UrlArr.length; j < len; j++){
-                console.log(UrlArr[j]);
-                $.getJSON(url, {imgurl: UrlArr[j]}, function(result, textStatus) {
-                    if (result.code == 1){
-                        $('.preview').append('<div><img src="'+result.imgurl+'" ><code class="title1">'+result.imgurl+'</code></div>');
-                    }else{
-                        layer.msg('第'+j+'个图片上传失败');
-                    }
-                    console.log(result);
-                });
-            }
-        }
-    </script>
-</body>
+ function update(type){
+ 	$('#file').val('');
+ 	$('#imgType').attr({
+ 		imgType: type,
+ 	});
+ 	file.click();
+
+ }
+
+
+ function sc(type){
+ 	if(!type){return false;}
+ 	var animateimg = $("#file").val();
+ 	$('#pg').val('0');
+ 	var imgarr=animateimg.split('\\');
+ 	var myimg=imgarr[imgarr.length-1];
+ 	var houzui = myimg.lastIndexOf('.');
+ 	var ext = myimg.substring(houzui, myimg.length).toUpperCase();  
+ 	var file = $('#file').get(0).files[0];
+ 	if(!file){return false;}
+ 	var fileSize = file.size;
+
+ 	switch(type){
+ 		case 'sougou':
+ 		var maxSize = 2097152;
+ 		break;
+ 		case 'baidu':
+ 		var maxSize = 2097152;
+ 		break; 
+ 		case 'so':
+ 		var maxSize = 2097152; 
+ 		break;
+ 		case 'sina':
+ 		var maxSize = 10485760; 
+ 		break;
+ 		default:
+ 		var maxSize = 10485760; 
+ 	} 
+ 	if(ext !='.PNG' && ext !='.GIF' && ext !='.JPG' && ext !='.JPEG' && ext !='.BMP'){  
+ 		parent.alert('文件类型错误,请上传图片类型');return false;  
+ 	}else if(parseInt(fileSize) >= parseInt(maxSize)){  
+ 		parent.alert('上传的文件不能超过'+maxSize/1024/1024+'MB');return false;  
+ 	}else{
+ 		$('#imgLoading').attr('src','https://ww2.sinaimg.cn/large/005BYqpgly1fxbbemsqxaj305k05k3yg.jpg');
+ 		var data = new FormData($('#form1')[0]);  
+ 		var YoungxjApisToken = 'f07b711396f9a05bc7129c4507fb65c5';
+ 		switch(type){
+ 			case 'sougou':
+ 			var apiUrl = 'https://apis.yum6.cn/api/5bd7f16aa33d7';
+ 			break;
+ 			case 'baidu':
+ 			var apiUrl = 'https://apis.yum6.cn/api/5bd828881f92b'; 
+ 			break;
+ 			case 'so':
+ 			var apiUrl = 'https://apis.yum6.cn/api/5bd90750c3f77'; 
+ 			break;
+ 			case 'sina':
+ 			var apiUrl = 'https://apis.yum6.cn/api/5bd44dc94bcfc'; 
+ 			break;
+ 			default:
+ 			return false;
+ 		};
+ 		$('#progress').show();
+ 		$.ajax({
+ 			url: apiUrl+'?token='+YoungxjApisToken,   
+ 			type: 'POST',    
+ 			data: data,    
+ 			dataType: 'JSON', 
+ 			processData: false,    
+ 			contentType: false,
+ 			xhr: function(){
+ 				var xhr = $.ajaxSettings.xhr();
+ 				if(onprogress && xhr.upload) {
+ 					xhr.upload.addEventListener("progress" , onprogress, false);
+ 					return xhr;
+ 				}
+ 			}
+ 		}).done(function(ret){
+ 			if(ret['code']=='1'){
+
+ 				var img = '';var imgurl = '';
+ 				if(type!='sina'){var imgSrc = ret['data'];}else{var imgSrc = ret['data']['url'];}
+ 				img += '<img src="'+imgSrc+'" name="sinaimg" id="sinaimg">';
+ 				
+ 				$('#Imgs_url').val(imgSrc);
+ 				$('#Imgs_html').val('<img src="'+imgSrc+'"/>');
+ 				$('#Imgs_Ubb').val('[img]'+imgSrc+'[/img]');
+ 				$('#Imgs_markdown').val('![]('+imgSrc+')');
+ 				$('#images').html(img);$('#imgLoading').attr('src','https://ww2.sinaimg.cn/large/005BYqpggy1fxbbgt35opj305k05k3yh.jpg');
+ 				$('#imgurl').show();
+ 				$('#progress').hide();  
+ 			}else{
+ 				$('#progress').hide();
+ 				$('#imgLoading').attr('src','https://ww2.sinaimg.cn/large/005BYqpggy1fxbbey7nfuj305k05k3yg.jpg');
+ 				parent.alert(ret['msg']);
+ 			}  
+ 			
+ 		});
+ 		return false;  
+ 	}    
+ }
+
+ function onprogress(evt){
+ 	var loaded = evt.loaded;
+ 	var tot = evt.total;
+ 	var per = Math.floor(100*loaded/tot);
+ 	$('#pg').val(per);
+
+ }
+ function oCopy(obj){
+ 	obj.select();
+ 	document.execCommand("Copy");
+ 	if (browserRedirect()) {alert('设备类型为手机，有一定几率复制失败！请查看剪切板是否成功复制');}
+ }
+
+ function browserRedirect(){
+ 	var sUserAgent = navigator.userAgent.toLowerCase();
+ 	var bIsIpad = sUserAgent.match(/ipad/i) == 'ipad';
+ 	var bIsIphone = sUserAgent.match(/iphone os/i) == 'iphone os';
+ 	var bIsMidp = sUserAgent.match(/midp/i) == 'midp';
+ 	var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == 'rv:1.2.3.4';
+ 	var bIsUc = sUserAgent.match(/ucweb/i) == 'web';
+ 	var bIsCE = sUserAgent.match(/windows ce/i) == 'windows ce';
+ 	var bIsWM = sUserAgent.match(/windows mobile/i) == 'windows mobile';
+ 	var bIsAndroid = sUserAgent.match(/android/i) == 'android';
+ 	if(bIsIpad || bIsIphone || bIsMidp || bIsUc7 || bIsUc || bIsCE || bIsWM || bIsAndroid ){
+ 		return 1;
+ 	}
+ };
+ $(document).ready(function(){
+ 	$('#imgLoading').click(function() {$("#imgContent").toggle();});
+ });
+</script>
 </html>
