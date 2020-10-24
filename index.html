@@ -1,250 +1,195 @@
-<!DOCTYPE html>
-<!-- saved from url=(0023)https://tuchuang.z68p.cn/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>KIENG图床-一个干净快速稳定的免费外链图床库</title>
-    <link href="https://tuchuang.z68p.cn/favicon.ico" rel="icon" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="keywords" content="KIENG图床,阿里图床,搜狗图床,网易图床,免费图片外链,API图床,图片外链,聚合图床">
-    <meta name="description" content="来自于KIENG博客维护,一个干净!快速!稳定的图床!全球CDN加速!聚合多家大厂图床,开放API接口.不会保存您的数据,让图床储存变得更安全,更简单.">
-    <!-- QQCard BEGIN -->
-    <meta itemprop="name" content="KIENG图床,一个免费优秀的图床.">
-    <meta itemprop="image" content="https://puui.qpic.cn/fans_admin/0/3_362389459_1583478289033/0">
-    <meta name="description" itemprop="description" content="免费,稳定的图床">
-<!-- QQCard END -->
-    <meta name="description" content="来自于KIENG博客维护,一个干净!快速!稳定的图床!全球CDN加速!聚合多家大厂图床,开放API接口.不会保存您的数据,让图床储存变得更安全,更简单.">
-    <link rel="stylesheet" type="text/css" href="./index_files/fileinput.min.css">
-    <link rel="stylesheet" type="text/css" href="./index_files/iconfont.css">
-    <link rel="stylesheet" type="text/css" href="./index_files/iconfont(1).css">
-    <link rel="stylesheet" type="text/css" href="./index_files/iconfont(2).css">
-    <link rel="stylesheet" type="text/css" href="./index_files/mdui.min.css">
-    <link rel="stylesheet" type="text/css" href="./index_files/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./index_files/app.css">
-    
-<style>
-	.btn-file {
-		background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-		background-size: 400%;
-		color: #fff;
-	}
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简图-图床聚合-小高教学网提供www.12580sky.com</title>
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/screen-v=175e285947.css" />
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/Teacher.css">
+    <meta name="description" content="永久免费图床，无需注册，批量上传，即时预览，无限流量，无限外链，永久保存，微博服务器，全网CDN，高速稳定，网页上传，无需插件。支持JPG, GIF, PNG等文件格式。支持远程图片上传。微博图床，围脖是个好图床。">
+    <meta name="keywords" content="图床,免费图床,新浪图床,微博图床,围脖是个好图床,围脖图床,网络图片,图片库,相册,网络相册,远程图片,上传远程图片,网络图片保存,tuchuang,外链,图片外链,外链相册,淘宝图片,论坛图片,贴图,教书先生图床">
+    <!--
+               ▄              ▄
+              ▌▒█           ▄▀▒▌
+              ▌▒▒▀▄        ▀▒▒▒▐
+             ▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+           ▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+         ▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▐
+        ▐▒▒▒▄▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▒▌
+        ▌▒▒▐▄█▀▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+       ▐▒▒▒▒▒▒▒▒▒▒▒▌██▀▒▒▒▒▒▒▒▒▀▄▌
+       ▌▒▀▄██▄▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
+       ▌▀▐▄█▄█▌▄▒▀▒▒▒▒▒▒░░░░░░▒▒▒▐
+      ▐▒▀▐▀▐▀▒▒▄▄▒▄▒▒▒  Teacher  ▒▌
+      ▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒░░░░░░▒▒▒▐
+       ▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌
+       ▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐
+        ▀ yo-du ▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▌
+          ▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
+         ▐▀▒▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
+        ▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▀
 
-	.btn-file:hover {
-		animation: sun 8s infinite;
-	}
-
-	@keyframes sun {
-		100%{
-			background-position: -400% 0;
-		}
-	}
-</style>
-
+        --你好，世界！生活，从敲的第一行代码开始。祝您扒码愉快，有问题请留言小高教学网www.12580sky.com。
+    -->
 </head>
-<body class="mdui-theme-accent-indigo mdui-appbar-with-toolbar mdui-loaded" style="">
-  <div class="mdui-appbar mdui-appbar-fixed">
-    <div class="mdui-toolbar mdui-color-black">
-        <span mdui-drawer="{target: &#39;#menu&#39;}" class="mdui-btn mdui-btn-icon open-menu"><i class="mdui-icon material-icons"></i></span>
-            <a href="https://tuchuang.z68p.cn/" class="mdui-typo-headline"><img style="width:145px;" src="./index_files/0"></a>
-            <div class="mdui-toolbar-spacer"></div>
-
-            <a href="https://blog.kieng.cn/" target="_blank" class="mdui-btn"><i class="mdui-icon material-icons">account_circle</i></a>
-
-        </div>
-    </div>
-
-    <div id="menu" class="mdui-drawer mdui-drawer-close">
-        <div class="mdui-list" mdui-collapse="{accordion: true}">
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/jd.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-jingdong mdui-text-color-red"></i>
-                <div class="mdui-list-item-content">JD图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/ali.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-ali mdui-text-color-orange"></i>
-                <div class="mdui-list-item-content">AL图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/sg.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-sougou mdui-text-color-blue"></i>
-                <div class="mdui-list-item-content">SG图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/c58.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-dispatch mdui-text-color-yellow"></i>
-                <div class="mdui-list-item-content">58图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/wy.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-wangyi mdui-text-color-red"></i>
-                <div class="mdui-list-item-content">WY图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/tt.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-toutiao mdui-text-color-red"></i>
-                <div class="mdui-list-item-content">TT图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/qq.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-dispatch mdui-text-color-blue"></i>
-                <div class="mdui-list-item-content">QQ图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/kefu.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-choice mdui-text-color-pink"></i>
-                <div class="mdui-list-item-content">KF图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/sh.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-souhu mdui-text-color-orange"></i>
-                <div class="mdui-list-item-content">SH图床</div>
-            </a>
-                        <a class="mdui-list-item mdui-ripple" href="https://tuchuang.z68p.cn/hl.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-sm mdui-text-color-blue"></i>
-                <div class="mdui-list-item-content">HL图床</div>
-            </a>
-            
-            <a class="mdui-list-item mdui-ripple " href="https://tuchuang.z68p.cn/about.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-icons-code mdui-text-color-red"></i>
-                <div class="mdui-list-item-content">说明/黑名单</div>
-            </a>
-            <a class="mdui-list-item mdui-ripple " href="https://tuchuang.z68p.cn/images.html">
-            	<i class="mdui-list-item-icon mdui-icon material-icons"></i>
-            	<div class="mdui-list-item-content">图库</div>
-            </a>
-            <a class="mdui-list-item mdui-ripple " href="https://tuchuang.z68p.cn/notice.html">
-                <i class="mdui-list-item-icon mdui-icon material-icons">notifications</i>
-                <div class="mdui-list-item-content">公告</div>
-            </a>
-        </div>
-    </div>
-    <div class="alert alert-warning alert-dismissible" role="alert" id="gonggao" style="">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="gonggaoClose"><span aria-hidden="true">×</span></button>
-      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <strong>警告</strong> 切勿传输违反国家法规的图片和个人隐私图片.本服务器记录上传者IP且为公开图床.有疑问请联系:<a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=admin@kieng.cn" target="_blank">admin@kieng.cn</a> &nbsp;&nbsp;&nbsp;<a href="https://tuchuang.z68p.cn/notice.html" target="_blank">更多</a>  </div>
-    
-<div class="mdui-container">
-    <main>
-        <div class="upload-container">
-    <div class="title">
-        <h1>Image Upload - JD 
-            <i class="mdui-list-item-icon mdui-icon material-icons iconfont icon-jingdong mdui-text-color-red"></i>
-        </h1>
-
-        <p>最大可上传 5120 KB的图片，单次同时可选择 20 张。<span style="color: red;">*推荐:稳定性好</span></p>
-    </div>
-    <form action="https://tuchuang.z68p.cn/" method="post" enctype="multipart/form-data">
-        <div class="file-input file-input-ajax-new"><div class="file-preview ">
-    <button type="button" class="close fileinput-remove" aria-label="Close">
-  <span aria-hidden="true" style="display: none;">×</span>
-</button>    <div class=" file-drop-zone"><div class="file-drop-zone-title">拖拽文件到这里 …<br>支持多文件同时上传</div>
-    <div class="file-preview-thumbnails">
-    </div>
-    <div class="clearfix"></div>    <div class="file-preview-status text-center text-success"></div>
-    <div class="kv-fileinput-error file-error-message" style="display: none;"></div>
-    </div>
-</div>
-<div class="kv-upload-progress kv-hidden" style="display: none;"><div class="progress">
-    <div class="progress-bar bg-success progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
-        0%
-     </div>
-</div></div><div class="clearfix"></div>
-<div class="input-group file-caption-main">
-  <div class="file-caption form-control kv-fileinput-caption" tabindex="500">
-  <span class="file-caption-icon"></span>
-  <input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="选择 个文件...">
-</div>
-<div class="input-group-btn input-group-append">
-      <button type="button" tabindex="500" title="清除选中文件" class="btn btn-default btn-secondary fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i>  <span class="hidden-xs">移除</span></button>
-      <button type="button" tabindex="500" title="取消进行中的上传" class="btn btn-default btn-secondary kv-hidden fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i>  <span class="hidden-xs">取消</span></button>
-      <a href="https://tuchuang.z68p.cn/upload.html?type=jd" tabindex="500" title="上传选中文件" class="btn btn-default btn-secondary fileinput-upload fileinput-upload-button"><i class="glyphicon glyphicon-upload"></i>  <span class="hidden-xs">上传</span></a>
-      <div tabindex="500" class="btn btn-primary btn-file"><i class="glyphicon glyphicon-picture"></i>   <span class="hidden-xs">选择 …</span><input id="image" style="display: block;" type="file" multiple="" name="image" accept="image/*"></div>
-    </div>
-</div></div>
-    </form>
-    <div class="success-info">
-        <div class="mdui-tab mdui-tab-scrollable" mdui-tab="">
-            <a href="https://tuchuang.z68p.cn/#code-url" class="mdui-ripple mdui-tab-active">URL</a>
-            <a href="https://tuchuang.z68p.cn/#code-html" class="mdui-ripple">HTML</a>
-            <a href="https://tuchuang.z68p.cn/#code-bbcode" class="mdui-ripple">BBCode</a>
-            <a href="https://tuchuang.z68p.cn/#code-markdown" class="mdui-ripple">Markdown</a>
-            <a href="https://tuchuang.z68p.cn/#code-markdown-with-link" class="mdui-ripple">Markdown with link</a>
-        <div class="mdui-tab-indicator" style="left: 0px; width: 160px;"></div></div>
-        <div id="code-url">
-            <ul></ul>
-        </div>
-        <div id="code-html" style="display: none;">
-            <ul></ul>
-        </div>
-        <div id="code-bbcode" style="display: none;">
-            <ul></ul>
-        </div>
-        <div id="code-markdown" style="display: none;">
-            <ul></ul>
-        </div>
-        <div id="code-markdown-with-link" style="display: none;">
-            <ul></ul>
+<body class="home-template nav-closed">
+<div id="loading" style="display: block;">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_four"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_one"></div>
         </div>
     </div>
 </div>
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        <li class="nav- nav-current"><a href="index.html">首页</a></li>
+        <li class="nav-"><a href="https://www.12580sky.com">小高教学网</a></li>
+        <li class="nav-web"><a href="https://www.12580sky.com">个人博客</a></li>
+    </ul>
+</div>
+<span class="nav-cover"></span>
+<div class="site-wrapper">
+    <header class="main-header" style="background-image: url('https://cdn.u1.huluxia.com/g3/M03/C5/A5/wKgBOV2JaPuASSchABiShu25-hk547.gif')">
+        <nav class="main-nav overlay clearfix">
+            <a class="blog-logo" href="index.html"><img src="assets/images/4--logo.png" alt="简图-图床聚合" /></a>
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        </nav>
+        <div class="vertical">
+            <div class="main-header-content inner">
+                <h1 class="page-title">简图-图床聚合</h1>
+                <h2 class="page-description">让储存变得简单有效</h2>
+            </div>
+        </div>
+        <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+        <div class="main-mask"></div>
+    </header>
+    <main id="content" class="content" role="main">
+    	<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+  <legend>接口说明-最大限制13MB</legend>
+</fieldset>
+   
+<blockquote class="layui-elem-quote layui-quote-nm" style="margin: 0 25px;">
+  <span class="layui-badge-dot"></span> 千图网：限制在3-4MB左右<br>
+  <span class="layui-badge-dot layui-bg-orange"></span> 葫芦侠：限制在6-7MB左右<br>
+  <span class="layui-badge-dot layui-bg-green"></span> 6直播：限制在13MB<br>
+  <span class="layui-badge-dot layui-bg-cyan"></span> 氧气直播：限制在13MB<br>
+  <span class="layui-badge-dot layui-bg-blue"></span> 京东：限制在3MB左右
+  <!--<span class="layui-badge-dot layui-bg-black"></span>-->
+  <!--<span class="layui-badge-dot layui-bg-gray"></span>-->
+
+</blockquote> 
+        <!--图床选择接口-->
+        <form class="layui-form" lay-filter="example">
+            <div class="layui-form-item">
+                <label class="layui-form-label">接口选择</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="type" value="qiantu" title="千图网" checked>
+                    <input type="radio" name="type" value="huluxia" title="葫芦侠">
+                    <input type="radio" name="type" value="6" title="6直播">
+                    <input type="radio" name="type" value="yq" title="氧秀直播">
+                    <input type="radio" name="type" value="jd" title="京东">
+                </div>
+            </div>
+        </form>
+        <div class="Teacher-up">
+            <div class="layui-progress layui-progress-big" lay-filter="demo" style="margin-bottom: 20px;" lay-showPercent="true">
+                <div class="layui-progress-bar" lay-percent="0%"></div>
+            </div>
+            <div class="layui-upload-drag" id="multiple">
+                <i class="layui-icon"></i>
+                <p>点击或者拖拽图片到此处上传</p>
+            </div>
+
+            <div class="layui-row">
+                <div class="layui-col-lg12" id="imgshow" style="display: none">
+                    <!-- 图片显示区域 -->
+                    <!-- 显示缩略图 -->
+                    <div class="layui-col-lg4">
+                        <div id="img-thumb"><a href="" target="_blank"><img alt="点此可查看详情"></a></div>
+                    </div>
+                    <!-- 显示地址 -->
+                    <div class="layui-col-lg7 layui-col-md-offset1">
+                        <div id="links">
+                            <table class="layui-table" lay-size="sm" lay-skin="nob">
+                                <tbody>
+                                <tr>
+                                    <td>URL</td>
+                                    <td><input type="text" class="layui-input" id="url" data-cip-id="url"></td>
+                                    <td><a href="javascript:;" class="layui-btn layui-btn-sm" onclick="copyurl('url')">复制</a></td>
+                                </tr>
+                                <tr>
+                                    <td>HTML</td>
+                                    <td><input type="text" class="layui-input" id="html" data-cip-id="html"></td>
+                                    <td><a href="javascript:;" class="layui-btn layui-btn-sm" onclick="copyurl('html')">复制</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Markdown</td>
+                                    <td><input type="text" class="layui-input" id="markdown" data-cip-id="markdown"></td>
+                                    <td><a href="javascript:;" class="layui-btn layui-btn-sm" onclick="copyurl('markdown')">复制</a></td>
+                                </tr>
+                                <tr>
+                                    <td>BBCode</td>
+                                    <td><input type="text" class="layui-input" id="bbcode" data-cip-id="bbcode"></td>
+                                    <td><a href="javascript:;" class="layui-btn layui-btn-sm" onclick="copyurl('bbcode')">复制</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 图片显示区域END -->
+                </div>
+            </div>
+
+        </div>
+
     </main>
-</div>
-
-    
-    <div class="mdui-fab-wrapper">
-        <button id="to-top" class="mdui-fab mdui-ripple mdui-fab-hide mdui-color-theme-accent">
-            <i class="mdui-icon material-icons"></i>
-        </button>
-    </div>
-    <div id="loading-container">
-        <div class="mask"></div>
-        <div class="loading">
-            <div class="mdui-spinner mdui-spinner-colorful"><div class="mdui-spinner-layer mdui-spinner-layer-1"><div class="mdui-spinner-circle-clipper mdui-spinner-left"><div class="mdui-spinner-circle"></div></div><div class="mdui-spinner-gap-patch"><div class="mdui-spinner-circle"></div></div><div class="mdui-spinner-circle-clipper mdui-spinner-right"><div class="mdui-spinner-circle"></div></div></div><div class="mdui-spinner-layer mdui-spinner-layer-2"><div class="mdui-spinner-circle-clipper mdui-spinner-left"><div class="mdui-spinner-circle"></div></div><div class="mdui-spinner-gap-patch"><div class="mdui-spinner-circle"></div></div><div class="mdui-spinner-circle-clipper mdui-spinner-right"><div class="mdui-spinner-circle"></div></div></div><div class="mdui-spinner-layer mdui-spinner-layer-3"><div class="mdui-spinner-circle-clipper mdui-spinner-left"><div class="mdui-spinner-circle"></div></div><div class="mdui-spinner-gap-patch"><div class="mdui-spinner-circle"></div></div><div class="mdui-spinner-circle-clipper mdui-spinner-right"><div class="mdui-spinner-circle"></div></div></div><div class="mdui-spinner-layer mdui-spinner-layer-4"><div class="mdui-spinner-circle-clipper mdui-spinner-left"><div class="mdui-spinner-circle"></div></div><div class="mdui-spinner-gap-patch"><div class="mdui-spinner-circle"></div></div><div class="mdui-spinner-circle-clipper mdui-spinner-right"><div class="mdui-spinner-circle"></div></div></div></div>
+    <hr>
+    <div class="about">
+        <div class="row-container">
+            <div class="about-w3ls-info text-center py-5">
+                <h3>About Us</h3>
+                <p>本站不做任何上传的图片保存，且上传后无法删除。请自行斟酌使用；请勿上传违反中国大陆和香港法律的图片，违者后果自负。</p>
+                <a href="javascript:void(0)" class="wow rotateIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: rotateIn;" id="pay">捐赠</a>
+            </div>
         </div>
     </div>
-    <footer>
-        <div id="copyUp" style="display: none;">
-            <div class="mdui-progress">
-              <div class="mdui-progress-indeterminate"></div>
-          </div>
-      </div>
-      <div class="mdui-container">
-        Copyright (c) 2020 <a href="https://blog.kieng.cn/" style="color:#999;" title="KIENG博客">KIENG</a> All rights reserved. 本网站图片托管总数:<span id="znumber"><code>1058243</code>+2551 | 稳定运行:168天</span> | <a href="https://tuchuang.z68p.cn/about.html">声明/黑名单</a> | ALICLOUD
-    </div>
-</footer>
-
-<script src="./index_files/hm.js.下载"></script><script src="./index_files/jquery.min.js.下载"></script>
-<script src="./index_files/mdui.min.js.下载"></script>
-<script src="./index_files/app.js.下载"></script>
-<script src="./index_files/clipboard.min.js.下载"></script>
-<script src="./index_files/fileinput.min.js.下载"></script>
-<script src="./index_files/zh.js.下载"></script>
-<script src="./index_files/bootstrap.min.js.下载"></script>
-
-<script>
-    var ApiUpload = 'jd';
-    var MykeySign = new Date().getTime();
-</script>
-<script src="./index_files/copyUp.js.下载"></script>
-<script src="./index_files/myUp.js.下载"></script><div id="kvFileinputModal" class="file-zoom-dialog modal fade" tabindex="-1" aria-labelledby="kvFileinputModalLabel"><div class="modal-dialog modal-lg" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title">详细预览</h5>
-      <span class="kv-zoom-title"></span>
-      <div class="kv-zoom-actions"><button type="button" class="btn btn-sm btn-kv btn-default btn-outline-secondary btn-toggleheader" title="缩放" data-toggle="button" aria-pressed="false" autocomplete="off"><i class="glyphicon glyphicon-resize-vertical"></i></button><button type="button" class="btn btn-sm btn-kv btn-default btn-outline-secondary btn-fullscreen" title="全屏" data-toggle="button" aria-pressed="false" autocomplete="off"><i class="glyphicon glyphicon-fullscreen"></i></button><button type="button" class="btn btn-sm btn-kv btn-default btn-outline-secondary btn-borderless" title="无边界模式" data-toggle="button" aria-pressed="false" autocomplete="off"><i class="glyphicon glyphicon-resize-full"></i></button><button type="button" class="btn btn-sm btn-kv btn-default btn-outline-secondary btn-close" title="关闭当前预览" data-dismiss="modal" aria-hidden="true"><i class="glyphicon glyphicon-remove"></i></button></div>
-    </div>
-    <div class="modal-body">
-      <div class="floating-buttons"></div>
-      <div class="kv-zoom-body file-zoom-content krajee-default"></div>
-<button type="button" class="btn btn-navigate btn-prev" title="预览上一个文件"><i class="glyphicon glyphicon-triangle-left"></i></button> <button type="button" class="btn btn-navigate btn-next" title="预览下一个文件"><i class="glyphicon glyphicon-triangle-right"></i></button>
-    </div>
-  </div>
 </div>
+<div id="suspension">
+    <div class="livechat-girl animated" style="right: -35px; bottom: 75px;">
+        <img class="girl" src="assets/images/a.png" oncontextmenu="return false;" ondragstart="return false;" style="border-radius: 0;">
+        <div class="livechat-hint rd-notice-tooltip rd-notice-type-success rd-notice-position-left single-line hide_hint">
+            <div class="rd-notice-content">嘿，来试试千图网吧！</div>
+        </div>
+        <div class="animated-circles animated">
+            <div class="circle c-1"></div>
+            <div class="circle c-2"></div>
+            <div class="circle c-3"></div>
+        </div>
+    </div>
 </div>
-<script src="./index_files/myFonction.js.下载"></script>
-<script src="./index_files/init.js.下载"></script>
-<!--百度统计-->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?8948fbcc68dc282165999647dc109378";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- 同步测试 -->
-</body></html>
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="layui-icon layui-icon-up"></i>
+    </a>
+</div>
+
+<div class="progress-bar"></div>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script src="assets/js/clipBoard.min.js"></script>
+<script type="text/javascript" src="layui/layui.all.js"></script>
+<script src="assets/js/scrollProgress.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.fitvids-v=175e285947.js"></script>
+<script type="text/javascript" src="assets/js/index-v=175e285947.js"></script>
+<script type="text/javascript" src="assets/js/Teacher.js"></script>
+</body>
+</html>
